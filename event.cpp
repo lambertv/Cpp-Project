@@ -1,12 +1,18 @@
 //erm... yeah..
 #include "event.h"
 #include <iostream>
-#include <cstring>
+#include <string>
 
-Event::Event(const char * nm)
+Event::Event(const std::string nm)
 {
-    std::strncpy(title, nm, 29);
-    title[29] = '\0';
+    title = nm;
+    hp_growth = 0;
+    str_growth = 0;
+}
+
+Event::Event()
+{
+    title = "no title";
     hp_growth = 0;
     str_growth = 0;
 }
@@ -29,4 +35,14 @@ int Event::get_hp_growth()
 int Event::get_str_growth()
 {
     return str_growth;
+}
+
+std::string Event::get_title()
+{
+    return title;
+}
+
+bool Event::operator==(const Event & t) const
+{
+    return (title == t.title);
 }
