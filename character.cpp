@@ -1,6 +1,6 @@
 //stats for character?
-#include <cstring>
 #include <iostream>
+#include <cstring>
 #include "character.h"
 
 Character::Character(const char * nm)

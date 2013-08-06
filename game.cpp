@@ -1,6 +1,7 @@
 //whaaaaaaa
 
 #include "character.h"
+#include "event.h"
 
 int main()
 {
@@ -14,5 +15,9 @@ int main()
     char1.add_strength(25);
     char1.show_stats();
     char1.add_strength(25);
+    char1.show_stats();
+    Event eat("Eat");
+    eat.change_hp_growth(5);
+    char1.add_hp(eat.get_hp_growth()*5);
     char1.show_stats();
 }
