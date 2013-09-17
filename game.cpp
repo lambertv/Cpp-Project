@@ -47,7 +47,7 @@ int main()
         std::stringstream convert(str_opt);
         if ( !(convert >> int_opt) )
             int_opt = 0;
-       char1 = in.perform_option(int_opt, char1);
+        char1 = in.perform_option(int_opt-1, char1);
     }
         
 }

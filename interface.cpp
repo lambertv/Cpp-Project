@@ -40,7 +40,7 @@ void Interface::display_options()
 {
     for (int i = 0; i < num_opt; i++)
     {
-        std::cout << i << ": " << options[i].get_title() << std::endl;
+        std::cout << i+1 << ": " << options[i].get_title() << std::endl;
     }
 }
 
